@@ -17,7 +17,8 @@ const Index = () => {
   return (
     <div className="space-background min-h-screen flex items-center justify-center p-4">
       <div className="stars"></div>
-      <div className="twinkling"></div>
+      <div className="stars stars-2"></div>
+      <div className="stars stars-3"></div>
       
       <Card className="w-full max-w-sm rounded-xl border border-purple-400 bg-black/70 backdrop-blur-md text-white shadow-[0_0_25px_rgba(155,135,245,0.6)]">
         <div className="p-4">
@@ -25,7 +26,9 @@ const Index = () => {
             <pre className="whitespace-pre-wrap">{scriptText}</pre>
           </div>
           <Button 
+            type="button"
             onClick={copyToClipboard} 
+            variant="default"
             className="w-full bg-purple-700 hover:bg-purple-600 transition-all"
           >
             {copied ? "Copied!" : "Copy Script"}

@@ -17,36 +17,13 @@
   overflow: hidden;
 }
 
-/* Stars background */
+/* Stars background - multiple layers for parallax effect */
 .stars {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("data:image/png;base64,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");
-  z-index: 0;
-}
-
-/* Star twinkling effect */
-.twinkling {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background: transparent;
-  animation: twinkle 10s linear infinite;
-}
-
-.twinkling:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  width: 200%;
+  height: 200%;
   background-image: 
     radial-gradient(1px 1px at 25px 5px, white 100%, transparent),
     radial-gradient(1px 1px at 50px 25px, white 100%, transparent),
@@ -57,19 +34,41 @@
     radial-gradient(2.5px 2.5px at 100px 150px, white 100%, transparent);
   background-repeat: repeat;
   background-size: 200px 200px;
-  opacity: 0;
-  animation: twinkle 15s infinite;
+  animation: moveStars 150s linear infinite;
 }
 
-@keyframes twinkle {
-  0% {
-    opacity: 0.2;
+.stars-2 {
+  background-image: 
+    radial-gradient(1px 1px at 10px 10px, white 100%, transparent),
+    radial-gradient(1px 1px at 150px 150px, white 100%, transparent),
+    radial-gradient(1.5px 1.5px at 60px 170px, white 100%, transparent),
+    radial-gradient(1px 1px at 175px 180px, white 100%, transparent),
+    radial-gradient(2px 2px at 195px 95px, white 100%, transparent),
+    radial-gradient(2px 2px at 95px 145px, white 100%, transparent);
+  background-size: 250px 250px;
+  opacity: 0.7;
+  animation: moveStars 200s linear infinite;
+}
+
+.stars-3 {
+  background-image: 
+    radial-gradient(1px 1px at 190px 15px, white 100%, transparent),
+    radial-gradient(1.5px 1.5px at 90px 40px, white 100%, transparent),
+    radial-gradient(1px 1px at 230px 85px, white 100%, transparent),
+    radial-gradient(2px 2px at 15px 110px, white 100%, transparent),
+    radial-gradient(2px 2px at 85px 190px, white 100%, transparent),
+    radial-gradient(1.5px 1.5px at 165px 120px, white 100%, transparent);
+  background-size: 300px 300px;
+  opacity: 0.5;
+  animation: moveStars 250s linear infinite;
+}
+
+@keyframes moveStars {
+  from {
+    transform: translate3d(0, 0, 0);
   }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0.2;
+  to {
+    transform: translate3d(-50%, -50%, 0);
   }
 }
 
